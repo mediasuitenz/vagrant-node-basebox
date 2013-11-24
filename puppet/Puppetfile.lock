@@ -1,0 +1,14 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    maestrodev/wget (1.2.3)
+    puppetlabs/git (0.0.3)
+    puppetlabs/stdlib (4.1.0)
+    willdurand/nodejs (1.5.1)
+      maestrodev/wget (>= 0.0.0)
+      puppetlabs/stdlib (>= 0.0.0)
+
+DEPENDENCIES
+  puppetlabs/git (= 0.0.3)
+  willdurand/nodejs (= 1.5.1)
+
