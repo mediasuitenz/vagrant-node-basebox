@@ -1,4 +1,4 @@
-vagrant-php-basebox
+vagrant-node-basebox
 ===================
 
 Standardises development environment for node based projects
