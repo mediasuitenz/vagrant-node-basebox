@@ -29,3 +29,8 @@ exec { 'add nodemodules to path':
 package { 'grunt-cli':
   provider => npm
 }
+
+# Requirement for phantomjs
+package { 'fontconfig':
+  ensure => latest
+}
