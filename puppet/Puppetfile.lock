@@ -2,7 +2,16 @@ FORGE
   remote: http://forge.puppetlabs.com
   specs:
     maestrodev/wget (1.2.3)
+    puppetlabs/apt (1.4.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/concat (1.0.0-rc1)
+    puppetlabs/firewall (0.4.2)
     puppetlabs/git (0.0.3)
+    puppetlabs/postgresql (3.2.0)
+      puppetlabs/apt (< 2.0.0, >= 1.1.0)
+      puppetlabs/concat (< 2.0.0, >= 1.0.0)
+      puppetlabs/firewall (>= 0.0.4)
+      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
     puppetlabs/stdlib (4.1.0)
     willdurand/nodejs (1.5.1)
       maestrodev/wget (>= 0.0.0)
@@ -10,5 +19,6 @@ FORGE
 
 DEPENDENCIES
   puppetlabs/git (= 0.0.3)
+  puppetlabs/postgresql (= 3.2.0)
   willdurand/nodejs (= 1.5.1)
 

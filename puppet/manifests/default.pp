@@ -34,3 +34,23 @@ package { 'grunt-cli':
 package { 'fontconfig':
   ensure => latest
 }
+
+class { 'postgresql::globals':
+  manage_package_repo => true,
+  version             => '9.2',
+}->
+class { 'postgresql::server':
+  postgres_password => 'password',
+  ip_mask_allow_all_users    => '0.0.0.0/0',
+  listen_addresses           => '*',
+}
+
+postgresql::server::db { 'development':
+  user     => 'user',
+  password => postgresql_password('user', 'password'),
+}
+
+postgresql::role { "user":
+  password_hash => postgresql_password('user', 'password'),
+  superuser => true,
+}
