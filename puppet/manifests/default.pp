@@ -44,6 +44,8 @@ class { 'postgresql::server':
   ip_mask_allow_all_users    => '0.0.0.0/0',
   listen_addresses           => '*',
 }
+->
+class { 'postgis':}
 
 postgresql::server::db { 'development':
   user     => 'user',

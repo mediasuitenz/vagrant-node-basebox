@@ -1,0 +1,8 @@
+name        'postgres-gis'
+version      '0.1.0'
+summary     'This module allows postgres with postgis to be installed'
+description 'This module allows postgres with postgis to be installed'
+license     'MIT'
+author      'Max Brosnahan'
+
+dependency  'puppetlabs/apt'
