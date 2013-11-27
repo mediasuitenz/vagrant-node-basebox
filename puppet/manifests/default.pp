@@ -50,7 +50,7 @@ postgresql::server::db { 'development':
   password => postgresql_password('user', 'password'),
 }
 
-postgresql::role { "user":
+postgresql::server::role { "user":
   password_hash => postgresql_password('user', 'password'),
   superuser => true,
 }
