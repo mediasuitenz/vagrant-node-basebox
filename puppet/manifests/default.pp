@@ -40,6 +40,8 @@ package { 'fontconfig':
   ensure => latest
 }
 
+# Databases
+
 class { 'postgresql::globals':
   manage_package_repo => true,
   version             => '9.2',

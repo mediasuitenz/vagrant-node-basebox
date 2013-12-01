@@ -39,7 +39,7 @@ class postgis {
     # refreshonly => true,
   }
   ->
-  exec { 'extract psotgis':
+  exec { 'extract postgis':
     command => '/bin/tar xfvz postgis-2.0.3.tar.gz',
     creates => '/tmp/postgis-2.0.3',
     cwd => '/tmp',
