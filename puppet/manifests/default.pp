@@ -16,6 +16,11 @@ package { "curl":
   ensure => present,
 }
 
+# Java
+package { 'openjdk-7-jre-headless':
+  ensure => present
+}
+
 # Install nodejs
 class { 'nodejs':
   version => 'v0.10.22'
