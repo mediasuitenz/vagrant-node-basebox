@@ -1,0 +1,41 @@
+{
+  "name": "example42-mongodb",
+  "version": "2.0.14",
+  "summary": "Puppet module for mongodb",
+  "author": "Alessandro Franceschi",
+  "description": "This module installs and manages mongodb. Check README for details.",
+  "dependencies": [
+    {
+      "name": "example42/puppi",
+      "version_requirement": ">=2.0.0"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "LICENSE": "a300b604c66de62cf6e923cca89c9d83",
+    "Modulefile": "1ca82a9db96a5e98d46747fcdddb808f",
+    "README.md": "2cb8c7815408fc37c4e3be0f563822fd",
+    "Rakefile": "e90d68823ff237c89224eb139f8926ad",
+    "manifests/client.pp": "e7ee272dc961681498324d9068eecfb3",
+    "manifests/dependency.pp": "b777fbf7c2ffd992edc88b85c05d1cb6",
+    "manifests/init.pp": "06fa8e4fb0fa04790bdff0e2fed99756",
+    "manifests/keyfile.pp": "a9b769ec1a662bc147f3002c68aa5125",
+    "manifests/params.pp": "310c08da5f195ebb6069482d742167f1",
+    "manifests/server.pp": "b4e4b178ba6a3686a3083084acd34531",
+    "manifests/spec.pp": "27ad7c3ea176511a7cf1b85981a46814",
+    "manifests/user.pp": "70f72ee411e5a24f18a376e237b867e6",
+    "spec/classes/standard42_spec.rb": "3394ddf85b38250127fde845bd25fbdb",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "templates/mongodb.conf.erb": "497110d6519ab164cde731ba1f77e44e",
+    "templates/spec.erb": "055d4f22a02a677753cf922108b6e50c",
+    "templates/user.js.erb": "f7a4071a893b65b451df5da923608462",
+    "tests/absent.pp": "367ab7930a2d4213dd1daabdba8cc2c9",
+    "tests/disable.pp": "4e5f6aa926674e2615e65b2b5a179f78",
+    "tests/init.pp": "a65f712cc1944cc1bad54c03203d75ed"
+  },
+  "source": "https://github.com/example42/puppet-mongodb",
+  "project_page": "http://www.example42.com",
+  "license": "Apache2"
+}

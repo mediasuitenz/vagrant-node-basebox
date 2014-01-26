@@ -63,3 +63,9 @@ postgresql::server::role { "user":
   password_hash => postgresql_password('user', 'password'),
   superuser => true,
 }
+
+class { 'mongodb': }
+
+mongodb::user { 'user':
+  password => 'password',
+}

@@ -5,3 +5,7 @@ mod 'puppetlabs/git', '0.0.3'
 mod 'willdurand/nodejs', '1.5.1'
 
 mod 'puppetlabs/postgresql', '3.2.0'
+
+mod 'example42/puppi', '2.1.7'
+
+mod 'example42/mongodb', '2.0.14'
