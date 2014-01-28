@@ -3,6 +3,8 @@ FORGE
   specs:
     example42/mongodb (2.0.14)
       example42/puppi (>= 2.0.0)
+    puppetlabs/mysql (2.0.1)
+      puppetlabs/stdlib (>= 2.2.1)
     example42/puppi (2.1.7)
     maestrodev/wget (1.2.3)
     puppetlabs/apt (1.4.0)
