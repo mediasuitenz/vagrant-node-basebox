@@ -55,18 +55,28 @@ class { 'postgresql::server':
 class { 'postgis':}
 
 postgresql::server::db { 'development':
-  user     => 'user',
-  password => postgresql_password('user', 'password'),
+  user     => 'username',
+  password => postgresql_password('username', 'password'),
 }
 
-postgresql::server::role { "user":
-  password_hash => postgresql_password('user', 'password'),
+postgresql::server::db { 'production':
+  user     => 'username',
+  password => postgresql_password('username', 'password'),
+}
+
+postgresql::server::db { 'testing':
+  user     => 'username',
+  password => postgresql_password('username', 'password'),
+}
+
+postgresql::server::role { "username":
+  password_hash => postgresql_password('username', 'password'),
   superuser => true,
 }
 
 class { 'mongodb': }
 
-mongodb::user { 'user':
+mongodb::user { 'username':
   password => 'password',
 }
 
@@ -80,7 +90,7 @@ class {'mysql::server':
   }
 }
 ->
-mysql_user { 'user@localhost':
+mysql_user { 'username@localhost':
   ensure                   => 'present',
   max_connections_per_hour => '0',
   max_queries_per_hour     => '0',
@@ -89,38 +99,38 @@ mysql_user { 'user@localhost':
   password_hash            => '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19',
 }
 ->
-mysql_grant { 'user@localhost/*.*':
+mysql_grant { 'username@localhost/*.*':
   ensure     => 'present',
   options    => ['GRANT'],
   privileges => ['ALL'],
   table      => '*.*',
-  user       => 'user@localhost',
+  user       => 'username@localhost',
 }
 ->
-mysql_grant { 'user@%/*.*':
+mysql_grant { 'username@%/*.*':
   ensure     => 'present',
   options    => ['GRANT'],
   privileges => ['ALL'],
   table      => '*.*',
-  user       => 'user@%',
+  user       => 'username@%',
 }
 
 mysql::db { 'development':
-  user     => 'user',
+  user     => 'username',
   password => 'password',
   host     => '%',
   grant    => ['ALL '],
 }
 
 mysql::db { 'production':
-  user     => 'user',
+  user     => 'username',
   password => 'password',
   host     => '%',
   grant    => ['ALL'],
 }
 
 mysql::db { 'testing':
-  user     => 'user',
+  user     => 'username',
   password => 'password',
   host     => '%',
   grant    => ['ALL'],
