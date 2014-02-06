@@ -10,4 +10,4 @@ mod 'example42/puppi', '2.1.7'
 
 mod 'example42/mongodb', '2.0.14'
 
-v ss
+mod 'puppetlabs/mysql', '2.0.1'
