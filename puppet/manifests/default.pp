@@ -135,3 +135,10 @@ mysql::db { 'testing':
   host     => '%',
   grant    => ['ALL'],
 }
+
+# module installed via
+# https://forge.puppetlabs.com/fsalum/redis
+# with the commands
+# v ssh
+# puppet module install --modulepath /vagrant/puppet/modules fsalum/redis
+class { 'redis': }
