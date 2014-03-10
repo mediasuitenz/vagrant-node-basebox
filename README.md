@@ -5,6 +5,14 @@ Standardises development environment for node based projects
 
 ## Packaging a new version of the box
 
+### The short way (this does everything in one go)
+
+- ```npm run build```
+
+Note: Virtualbox guest additions can cause issues. Run this command, if it fails, run it again. It make take a few goes. Probably give up after about 4-5 goes and try the long way outlined below...
+
+### The long way
+
 Perform the following commands:
 
 - ```cd <repo-root>``` (where this file is located)
