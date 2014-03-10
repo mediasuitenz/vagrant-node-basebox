@@ -11,4 +11,6 @@ Vagrant.configure("2") do |config|
     puppet.options = ['--verbose']
   end
 
+  config.vm.network "forwarded_port", guest: 6379, host: 6379
+
 end
